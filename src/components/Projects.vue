@@ -103,6 +103,11 @@
 import { ArrowRightIcon, ChatBubbleLeftRightIcon, ClockIcon, CodeBracketIcon, EyeIcon } from '@heroicons/vue/16/solid';
 import { computed, ref } from 'vue';
 import { setLang, t, i18nState } from '../i18n.js';
+import image1 from '../../public/about3.PNG'
+import image2 from '../../public/Patlearn_img.PNG'
+import image3 from '../../public/gamestore.PNG'
+import image4 from '../../public/bestie.PNG'
+import image5 from '../../public/presenceToggle.PNG'
 
 
 
@@ -111,7 +116,7 @@ const projets = ref(computed(() => [
         id: 1,
         title: "E-Commerce Platform  - ArtShop",
         desc: t('projectsdesc1'),
-        image: '../../public/about3.PNG',
+        image: image1,
         category: 'Back-end',
         bordColor: 'border-blue-500/20',
         badgColor: "bg-blue-500",
@@ -149,7 +154,7 @@ const projets = ref(computed(() => [
         id: 2,
         title: "E-Learning Platform  - PatLearn",
         desc: t('projectsdesc2'),
-        image: '../../public/Patlearn_img.PNG',
+        image: image2,
         category: 'Back-end',
         bordColor: 'border-cyan-500/20',
         badgColor: "bg-cyan-500",
@@ -187,7 +192,7 @@ const projets = ref(computed(() => [
         id: 3,
         title: "E-Commerce Platform - GameStore",
         desc: t('projectsdesc3'),
-        image: '../../public/gamestore.PNG',
+        image: image3,
         category: 'Full-Stack',
         bordColor: 'border-blue-500/20',
         badgColor: "bg-blue-500",
@@ -224,7 +229,7 @@ const projets = ref(computed(() => [
         id: 4,
         title: "Valentine website",
         desc: t('projectsdesc4'),
-        image: '../../public/bestie.PNG',
+        image: image4,
         category: 'Valentine',
         bordColor: 'border-cyan-500/20',
         badgColor: "bg-cyan-500",
@@ -253,7 +258,7 @@ const projets = ref(computed(() => [
         id: 5,
         title: "Presence - Toggle",
         desc: t('projectsdesc5'),
-        image: '../../public/presenceToggle.PNG',
+        image: image5,
         category: 'Dashboard',
         bordColor: 'border-blue-500/20',
         badgColor: "bg-blue-500",
