@@ -122,7 +122,7 @@ const skills = [
         title: "Frontend Development",
         icon: CodeBracketIcon,
         iconColor: 'text-blue-400',
-        percentage: 80,
+        percentage: 70,
         percentageColor: "text-blue-400 text-sm",
         gradient: 'bg-linear-to-r from-blue-500 to-cyan-500'
     },
@@ -131,7 +131,7 @@ const skills = [
         title: "Backend Development",
         icon: ServerIcon,
         iconColor: 'text-cyan-400',
-        percentage: 85,
+        percentage: 75,
         percentageColor: "text-cyan-400 text-sm",
         gradient: 'bg-linear-to-r from-cyan-500 to-blue-500'
     },

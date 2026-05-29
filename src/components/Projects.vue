@@ -103,7 +103,7 @@
 import { ArrowRightIcon, ChatBubbleLeftRightIcon, ClockIcon, CodeBracketIcon, EyeIcon } from '@heroicons/vue/16/solid';
 import { computed, ref } from 'vue';
 import { setLang, t, i18nState } from '../i18n.js';
-import image1 from '../../public/about3.PNG'
+import image1 from '../../public/artshoptof.PNG'
 import image2 from '../../public/Patlearn_img.PNG'
 import image3 from '../../public/gamestore.PNG'
 import image4 from '../../public/bestie.PNG'
