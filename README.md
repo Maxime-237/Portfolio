@@ -1,12 +1,15 @@
 # Maxime.dev — Portfolio (Vue 3 + Vite)
 
-Simple portfolio web.
+Portfolio personnel — Full-Stack Developer.
 
 ## Fonctionnalités
 
-- Contact → ouvre WhatsApp (message pré-rempli)
+- Contact → preview du message puis envoi via WhatsApp (message pré-rempli, éditable)
 - Download CV → télécharge le PDF
-- Formulaire contact → envoie via WhatsApp + confirmation
+- Formulaire de contact → ouvre la preview WhatsApp avant envoi
+- i18n FR / EN / DE
+- Case study modal sur chaque projet
+- Statistiques GitHub en direct (github-readme-stats)
 
 ## Installation
 
@@ -29,8 +32,6 @@ npm run preview
 
 ## Notes
 
-- Numéro WhatsApp défini dans :
-  - src/components/Hero.vue
-  - src/components/About.vue
-  - src/components/Contact.vue
-- CV à télécharger : public/CV.pdf
+- Numéro WhatsApp défini dans `src/composables/useWhatsApp.js`
+- CV à télécharger : `public/maxime_Cv.pdf`
+- Palette et polices définies dans `src/style.css` (`@theme`)

@@ -5,17 +5,19 @@
     <LoadingSpinner />
   </div>
 
-  <div v-else class="min-h-screen bg-linear-to-br from-gray-900 via-blue-900 to-gray-900">
+  <div v-else class="min-h-screen bg-linear-to-br from-gray-900 via-slate-900 to-gray-900">
     <Navbar />
     <Hero />
-    <Services />
     <About />
+    <Services />
     <ExperienceSkills />
     <Projects />
-    <Contact />
+    <GitHubStats />
     <Testimonials />
+    <Contact />
     <Footer />
-    <BackToTop /> 
+    <BackToTop />
+    <WhatsAppPreviewModal />
   </div>
 </template>
 
@@ -30,11 +32,13 @@ import Services from './components/Services.vue';
 import About from './components/About.vue';
 import ExperienceSkills from './components/ExperienceSkills.vue';
 import Projects from './components/Projects.vue';
+import GitHubStats from './components/GitHubStats.vue';
 import Contact from './components/Contact.vue';
 import Testimonials from './components/Testimonials.vue';
 import Footer from './components/Footer.vue';
 import BackToTop from './components/BackToTop.vue';
 import LoadingSpinner from './components/LoadingSpinner.vue';
+import WhatsAppPreviewModal from './components/WhatsAppPreviewModal.vue';
 
         
 const loading = ref(true);

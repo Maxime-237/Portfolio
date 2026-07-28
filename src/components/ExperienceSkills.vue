@@ -5,10 +5,10 @@
         
         <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-                <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">{{ t('skillsSectionTitle1') }} </span>{{ t('skillsSectionTitle') }}
+                <span class="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-teal-400">{{ t('skillsSectionTitle1') }} </span>{{ t('skillsSectionTitle') }}
             </h2>
 
-            <p class="text-blue-200 text-lg max-w-2xl mx-auto">
+            <p class="text-amber-200 text-lg max-w-2xl mx-auto">
                 {{ t('skillParagraph') }}
             </p>
         </div>
@@ -26,9 +26,9 @@
                         :key="skill.id"
                         class="group"
                     >
-                        <div class="flex items justify-between mb-3">
+                        <div class="flex items-center justify-between mb-3">
 
-                                <span class="text-blue-200 font-semibold flex items-center gap-2">
+                                <span class="text-amber-200 font-semibold flex items-center gap-2">
 
                                     <component 
                                         :is="skill.icon"
@@ -38,7 +38,7 @@
                                     {{ skill.title }}
                                 </span>
 
-                                <span :class="skill.percentageColor">
+                                <span class="font-mono" :class="skill.percentageColor">
                                     {{ skill.percentage }} %
                                 </span>
                         </div>
@@ -55,14 +55,14 @@
                 <div class="mt-12">
 
                     <h4 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                        <Squares2X2Icon class="w-6 h-6 text-cyan-400" />
+                        <Squares2X2Icon class="w-6 h-6 text-teal-400" />
                         {{ t('techStackTitle') }}
                     </h4>
 
                     <div class="flex flex-wrap gap-3">
                         <span v-for="tech in techStack"
                             :key="tech"
-                            class="px-4 py-2 bg-linear-to-r from-blue-500/20 border border-blue-400/30 rounded-full text-blue-200 text-sm font-medium hover:scale-105 transition-transform duration-300">
+                            class="px-4 py-2 bg-linear-to-r from-amber-500/20 border border-amber-400/30 rounded-full text-amber-200 text-sm font-mono font-medium hover:scale-105 transition-transform duration-300">
                             {{ tech }}
 
                         </span>
@@ -72,7 +72,7 @@
 
             <div data-aos="fade-left">
                 <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                    <BriefcaseIcon class="w-8 h-8 text-cyan-400" />
+                    <BriefcaseIcon class="w-8 h-8 text-teal-400" />
                     {{ t('workExperienceTitle') }}
                 </h3>
 
@@ -86,20 +86,20 @@
                             :class="exp.dotColor">
                         </div>
 
-                        <div class="bg-linear-to-r from-gray-800/50 to-blue-900/30 rounded-2xl p-6 border backdrop-blur-sm group-hover:border-blue-400/40 transition-all duration-300"
+                        <div class="bg-linear-to-r from-gray-800/50 to-slate-900/30 rounded-2xl p-6 border backdrop-blur-sm group-hover:border-amber-400/40 transition-all duration-300"
                             :class="exp.borderclass">
 
                             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                                 <h4 class="text-lg font-bold text-white">{{ exp.position }}</h4>
                                 <span :class="exp.dateColor"
-                                  class="mt-1 sm:mt-0">{{ exp.period }}</span>
+                                  class="mt-1 sm:mt-0 font-mono text-sm">{{ exp.period }}</span>
                             </div>
 
                             <p :class="exp.companyColor"
                                 class="font-medium mb-3">{{ exp.company }}
                             </p>
 
-                            <p class="text-blue-100 text-sm leading-relaxed">{{ exp.desc }}</p>
+                            <p class="text-amber-100 text-sm leading-relaxed">{{ exp.desc }}</p>
                         </div>
 
                     </div>
@@ -121,61 +121,61 @@ const skills = [
         id: 1,
         title: "Frontend Development",
         icon: CodeBracketIcon,
-        iconColor: 'text-blue-400',
+        iconColor: 'text-amber-400',
         percentage: 70,
-        percentageColor: "text-blue-400 text-sm",
-        gradient: 'bg-linear-to-r from-blue-500 to-cyan-500'
+        percentageColor: "text-amber-400 text-sm",
+        gradient: 'bg-linear-to-r from-amber-500 to-teal-500'
     },
     {
         id: 2,
         title: "Backend Development",
         icon: ServerIcon,
-        iconColor: 'text-cyan-400',
+        iconColor: 'text-teal-400',
         percentage: 75,
-        percentageColor: "text-cyan-400 text-sm",
-        gradient: 'bg-linear-to-r from-cyan-500 to-blue-500'
+        percentageColor: "text-teal-400 text-sm",
+        gradient: 'bg-linear-to-r from-teal-500 to-amber-500'
     },
     {
         id: 3,
         title: "UI/UX Design",
         icon: PaintBrushIcon,
-        iconColor: 'text-blue-400',
+        iconColor: 'text-amber-400',
         percentage: 30,
-        percentageColor: "text-blue-400 text-sm",
-        gradient: 'bg-linear-to-r from-blue-500 to-cyan-500'
+        percentageColor: "text-amber-400 text-sm",
+        gradient: 'bg-linear-to-r from-amber-500 to-teal-500'
     },
     {
         id: 4,
         title: "System architecture",
         icon: DevicePhoneMobileIcon,
-        iconColor: 'text-cyan-400',
+        iconColor: 'text-teal-400',
         percentage: 55,
-        percentageColor: "text-blue-400 text-sm",
-        gradient: 'bg-linear-to-r from-cyan-500 to-blue-500'
+        percentageColor: "text-amber-400 text-sm",
+        gradient: 'bg-linear-to-r from-teal-500 to-amber-500'
     },
     {
         id: 5,
         title: "DevOps & Cloud",
         icon: CloudIcon,
-        iconColor: 'text-blue-400',
+        iconColor: 'text-amber-400',
         percentage: 50,
-        percentageColor: "text-blue-400 text-sm",
-        gradient: 'bg-linear-to-r from-blue-500 to-cyan-500'
+        percentageColor: "text-amber-400 text-sm",
+        gradient: 'bg-linear-to-r from-amber-500 to-teal-500'
     }
 ]
 
 const experiences = computed(() => [
     {
         id: 1,
-        position: "Backend Developper",
+        position: "Backend Developer",
         company: "Ccn Technologie.",
         period: "27 février - 29 mai 2026",
         desc: t('SkillsDesc1'),
-        borderColor: "border-blue-500/30",
-        dotColor: "bg-blue-500",
-        borderclass: "border-blue-400 text-sm font-semibold",
-        dateColor: "text-blue-400 text-sm font-semibold",
-        companyColor: "text-cyan-400"
+        borderColor: "border-amber-500/30",
+        dotColor: "bg-amber-500",
+        borderclass: "border-amber-400 text-sm font-semibold",
+        dateColor: "text-amber-400 text-sm font-semibold",
+        companyColor: "text-teal-400"
     },
     {
         id: 2,
@@ -183,11 +183,11 @@ const experiences = computed(() => [
         company: "Projet de groupe - Institut universitaire de technologie (IUT) de Douala.",
         period: "Oct 2025 - Nov 2025",
         desc: t('SkillsDesc2'),
-        borderColor: "border-cyan-500/30",
-        dotColor: "bg-cyan-500",
-        borderclass: "border-cyan-400 text-sm font-semibold",
-        dateColor: "text-cyan-400 text-sm font-semibold",
-        companyColor: "text-blue-400"
+        borderColor: "border-teal-500/30",
+        dotColor: "bg-teal-500",
+        borderclass: "border-teal-400 text-sm font-semibold",
+        dateColor: "text-teal-400 text-sm font-semibold",
+        companyColor: "text-amber-400"
     },
     // {
     //     id: 3,
@@ -195,11 +195,11 @@ const experiences = computed(() => [
     //     company: "SartUp Innovations",
     //     period: "2019 - 2020",
     //     desc: "Participation à la création d’applications web : intégration des composants, collaboration back-end et mise en pratique des bonnes pratiques (Git, qualité du code).",
-    //     borderColor: "border-blue-500/30",
-    //     dotColor: "bg-blue-500",
-    //     borderclass: "border-blue-500/20",
-    //     dateColor: "text-blue-400 text-sm font-semibold",
-    //     companyColor: "text-cyan-400"
+    //     borderColor: "border-amber-500/30",
+    //     dotColor: "bg-amber-500",
+    //     borderclass: "border-amber-500/20",
+    //     dateColor: "text-amber-400 text-sm font-semibold",
+    //     companyColor: "text-teal-400"
     // }
 ])
 

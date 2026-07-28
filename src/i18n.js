@@ -16,7 +16,9 @@ const translations = {
     heroDownloadCv: 'Télécharger le CV',
     heroStatsProjects: 'Projets',
     heroStatsYears: 'Années',
-    heroStatsClients: 'Clients',
+    heroStatsTech: 'Technologies',
+    heroRoles: ['Développeur Full-Stack', 'Intégrateur Vue.js & Laravel', 'Résolveur de problèmes'],
+    heroEyebrow: 'Disponible pour de nouvelles missions',
 
     // Sections
 
@@ -76,12 +78,33 @@ const translations = {
     projectsdesc1: 'Plateforme e-commerce développée pour une expérience back-end solide : gestion produits, parcours clients et fonctionnalités intégrées.',
     projectsdesc2: 'Application e-learning avec une stack moderne : pages dynamiques, gestion des contenus et suivi pensé pour une expérience fluide côté utilisateur.',
     projectsdesc3: 'Projet full-stack e-commerce : interfaces front réactives, logique back-end claire et données persistantes pour une navigation et un panier fiables.',
-    projectsdesc4: 'Site web Valentine conçu pour une expérience rapide et élégante : mise en page soignée, interactions légères et rendu mobile-friendly.',
+    projectsdesc4: 'Site web Belleza conçu pour une expérience front-end réactive : interfaces claires, logique back-end structurée et données persistantes pour un parcours utilisateur fiable.',
+    projectsdesc6: 'Site web Valentine conçu pour une expérience rapide et élégante : mise en page soignée, interactions légères et rendu mobile-friendly.',
     projectsdesc5: 'Dashboard en cours de finalisation : affichage des données, logique back-end et interface responsive pour un contrôle clair des informations.',
     projectLive: 'Démo en ligne',
     projectProgress: 'En cours',
     projectsCtaViewAll: 'Voir tous les projets',
     projectsCtaDiscuss: 'Discuter de projet',
+    projectDetailsCta: 'Voir le détail',
+    projectsShowMore: 'Voir plus de projets',
+    projectsShowLess: 'Voir moins',
+    modalStack: 'Stack technique',
+    modalClose: 'Fermer',
+    modalRole: 'Mon rôle',
+    modalObjective: 'Objectif',
+
+    githubTitle: 'Activité GitHub',
+    githubDesc: 'Un aperçu en direct de mes contributions et de mes langages les plus utilisés.',
+    githubRepos: 'Dépôts publics',
+    githubStars: 'Étoiles reçues',
+    githubFollowers: 'Abonnés',
+    githubTopLangs: 'Langages les plus utilisés',
+    githubError: 'Les statistiques sont momentanément indisponibles (limite de requêtes GitHub). Retrouvez mon profil directement :',
+
+    whatsappPreviewTitle: 'Aperçu du message',
+    whatsappPreviewDesc: 'Voici le message qui sera envoyé sur WhatsApp.',
+    whatsappPreviewEdit: 'Modifier',
+    whatsappPreviewSend: 'Confirmer et envoyer',
 
     //testmonials section
     testimonialsTitle: 'Témoignages',
@@ -120,8 +143,8 @@ const translations = {
     homeFooter: 'Accueil',
     footerServices: 'Services',
     footerPrivacyPolicy: 'Politique de confidentialité',
-    footerTeamsOfService: 'Conditions d’utilisation',
-    footerCopyright: '©2026 Maxime. Tous droits réservés',
+    footerTermsOfService: 'Conditions d’utilisation',
+    footerCopyright: '© {year} Maxime. Tous droits réservés',
 
     // Dynamic lists keys
     servicesCtaGetInTouch: 'Entrons en contact',
@@ -138,7 +161,9 @@ const translations = {
     heroDownloadCv: 'Download CV',
     heroStatsProjects: 'Projects',
     heroStatsYears: 'Years',
-    heroStatsClients: 'Clients',
+    heroStatsTech: 'Technologies',
+    heroRoles: ['Full-Stack Developer', 'Vue.js & Laravel Integrator', 'Problem Solver'],
+    heroEyebrow: 'Available for new projects',
 
     // Sections
 
@@ -192,12 +217,33 @@ const translations = {
     projectsdesc1: 'E-commerce platform developed for a solid back-end experience: product management, customer journey, and integrated features.',
     projectsdesc2: 'E-learning application with a modern stack: dynamic pages, content management, and tracking designed for a smooth user experience.',
     projectsdesc3: 'Full-stack e-commerce project: reactive front interfaces, clear back-end logic, and persistent data for reliable navigation and cart.',
-    projectsdesc4: 'Valentine website designed for a fast and sleek experience: polished layout, light interactions, and mobile-friendly rendering.',
+    projectsdesc4: 'Belleza website designed for a reactive front-end experience: clear interfaces, structured back-end logic, and persistent data for a reliable user journey.',
+    projectsdesc6: 'Valentine website designed for a fast and sleek experience: polished layout, light interactions, and mobile-friendly rendering.',
     projectsdesc5: 'Dashboard in finalization: data display, back-end logic, and responsive interface for clear control of information.',
     projectLive: 'Live Demo',
     projectProgress: 'In Progress',
     projectsCtaViewAll: 'View All Projects',
     projectsCtaDiscuss: 'Discuss Project',
+    projectDetailsCta: 'View details',
+    projectsShowMore: 'Show more projects',
+    projectsShowLess: 'Show less',
+    modalStack: 'Tech stack',
+    modalClose: 'Close',
+    modalRole: 'My role',
+    modalObjective: 'Objective',
+
+    githubTitle: 'GitHub Activity',
+    githubDesc: 'A live look at my contributions and most-used languages.',
+    githubRepos: 'Public repos',
+    githubStars: 'Stars earned',
+    githubFollowers: 'Followers',
+    githubTopLangs: 'Most used languages',
+    githubError: 'Stats are temporarily unavailable (GitHub rate limit). Check out my profile directly:',
+
+    whatsappPreviewTitle: 'Message preview',
+    whatsappPreviewDesc: 'Here is the message that will be sent on WhatsApp.',
+    whatsappPreviewEdit: 'Edit',
+    whatsappPreviewSend: 'Confirm and send',
 
     testimonialsTitle: 'Testimonials',
     testimonialsDesc: 'What people say about working with me',
@@ -232,8 +278,8 @@ const translations = {
     homeFooter: 'Home',
     footerServices: 'Services',
     footerPrivacyPolicy: 'Privacy Policy',
-    footerTeamsOfService: 'Terms of Service',
-    footerCopyright: '©2026 Maxime. All rights reserved',
+    footerTermsOfService: 'Terms of Service',
+    footerCopyright: '© {year} Maxime. All rights reserved',
   },
   de: {
     // Navbar
@@ -246,7 +292,9 @@ const translations = {
     heroDownloadCv: 'Lebenslauf laden',
     heroStatsProjects: 'Projekte',
     heroStatsYears: 'Jahre',
-    heroStatsClients: 'Kunden',
+    heroStatsTech: 'Technologien',
+    heroRoles: ['Full-Stack Entwickler', 'Vue.js & Laravel Integrator', 'Problemlöser'],
+    heroEyebrow: 'Verfügbar für neue Projekte',
 
     // Sections
 
@@ -302,12 +350,33 @@ const translations = {
     projectsdesc1: 'E-Commerce-Plattform entwickelt für eine solide Back-End-Erfahrung: Produktmanagement, Kundenreise und integrierte Funktionen.',
     projectsdesc2: 'E-Learning-Anwendung mit einem modernen Stack: dynamische Seiten, Inhaltsverwaltung und Tracking für eine reibungslose Benutzererfahrung.',
     projectsdesc3: 'Full-Stack-E-Commerce-Projekt: reaktive Front-Interfaces, klare Back-End-Logik und persistente Daten für zuverlässige Navigation und Warenkorb.',
-    projectsdesc4: 'Valentine-Website für eine schnelle und elegante Erfahrung: poliertes Layout, leichte Interaktionen und mobilefreundliches Rendering.',
+    projectsdesc4: 'Belleza-Website für eine reaktive Front-End-Erfahrung: klare Schnittstellen, strukturierte Back-End-Logik und persistente Daten für eine zuverlässige Benutzerreise.',
+    projectsdesc6: 'Valentine-Website für eine schnelle und elegante Erfahrung: poliertes Layout, leichte Interaktionen und mobilefreundliches Rendering.',
     projectsdesc5: 'Dashboard in der Finalisierung: Datenanzeige, Back-End-Logik und responsive Oberfläche für klare Kontrolle über Informationen.',
     projectLive: 'Live-Demo',
     projectProgress: 'In Bearbeitung',
     projectsCtaViewAll: 'Alle Projekte ansehen',
     projectsCtaDiscuss: 'Projekt besprechen',
+    projectDetailsCta: 'Details ansehen',
+    projectsShowMore: 'Mehr Projekte anzeigen',
+    projectsShowLess: 'Weniger anzeigen',
+    modalStack: 'Tech-Stack',
+    modalClose: 'Schließen',
+    modalRole: 'Meine Rolle',
+    modalObjective: 'Ziel',
+
+    githubTitle: 'GitHub-Aktivität',
+    githubDesc: 'Ein Live-Einblick in meine Beiträge und meistgenutzten Sprachen.',
+    githubRepos: 'Öffentliche Repos',
+    githubStars: 'Erhaltene Sterne',
+    githubFollowers: 'Follower',
+    githubTopLangs: 'Meistgenutzte Sprachen',
+    githubError: 'Statistiken sind vorübergehend nicht verfügbar (GitHub-Ratenlimit). Mein Profil direkt ansehen:',
+
+    whatsappPreviewTitle: 'Nachrichtenvorschau',
+    whatsappPreviewDesc: 'Dies ist die Nachricht, die per WhatsApp gesendet wird.',
+    whatsappPreviewEdit: 'Bearbeiten',
+    whatsappPreviewSend: 'Bestätigen und senden',
 
     testimonialsTitle: 'Referenzen',
     testimonialsDesc: 'Was Leute über die Zusammenarbeit mit mir sagen',
@@ -341,13 +410,20 @@ const translations = {
     homeFooter: 'Startseite',
     footerServices: 'Leistungen',
     footerPrivacyPolicy: 'Datenschutzerklärung',
-    footerTeamsOfService: 'Nutzungsbedingungen',
-    footerCopyright: '©2026 Maxime. Alle Rechte vorbehalten',
+    footerTermsOfService: 'Nutzungsbedingungen',
+    footerCopyright: '© {year} Maxime. Alle Rechte vorbehalten',
   },
 };
 
-export function t(key) {
-  return translations[i18nState.lang]?.[key] ?? translations.fr?.[key] ?? key;
+export function t(key, params) {
+  const value = translations[i18nState.lang]?.[key] ?? translations.fr?.[key] ?? key;
+  if (typeof value === 'string' && params) {
+    return Object.keys(params).reduce(
+      (str, paramKey) => str.replaceAll(`{${paramKey}}`, params[paramKey]),
+      value
+    );
+  }
+  return value;
 }
 
 export function setLang(lang) {

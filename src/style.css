@@ -1,1 +1,80 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: #0b0e14;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-display);
+}
+
+/* Signature background: faint code-editor grid, very low opacity so it stays premium, not noisy */
+.bg-code-grid {
+    background-image:
+        linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 42px 42px;
+}
+
+/* Terminal-window chrome used on cards to reinforce the "code editor" signature */
+.window-chrome {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.window-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 9999px;
+}
+
+/* Custom scrollbar, quieter than the browser default */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b0e14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3f3520;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ca8a04;
+}
+
+::selection {
+    background: rgba(245, 158, 11, 0.35);
+    color: #fff;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
