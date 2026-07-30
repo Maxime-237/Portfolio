@@ -8,6 +8,8 @@ const translations = {
   fr: {
     // Navbar
     navbarChangeLanguage: 'Changer de langue',
+    themeSwitchToLight: 'Passer en mode clair',
+    themeSwitchToDark: 'Passer en mode sombre',
 
     // Hero
     heroDomain: 'Développeur full-stack',
@@ -78,8 +80,8 @@ const translations = {
     projectsdesc1: 'Plateforme e-commerce développée pour une expérience back-end solide : gestion produits, parcours clients et fonctionnalités intégrées.',
     projectsdesc2: 'Application e-learning avec une stack moderne : pages dynamiques, gestion des contenus et suivi pensé pour une expérience fluide côté utilisateur.',
     projectsdesc3: 'Projet full-stack e-commerce : interfaces front réactives, logique back-end claire et données persistantes pour une navigation et un panier fiables.',
-    projectsdesc4: 'Site web Belleza conçu pour une expérience front-end réactive : interfaces claires, logique back-end structurée et données persistantes pour un parcours utilisateur fiable.',
-    projectsdesc6: 'Site web Valentine conçu pour une expérience rapide et élégante : mise en page soignée, interactions légères et rendu mobile-friendly.',
+    projectsdescBel: 'Site web de vente de produits, accessoires de beauté dont la commande e fait par whatsapp... #VibeCoding',
+    projectsdesc4: 'Site web Valentine conçu pour une expérience rapide et élégante : mise en page soignée, interactions légères et rendu mobile-friendly.',
     projectsdesc5: 'Dashboard en cours de finalisation : affichage des données, logique back-end et interface responsive pour un contrôle clair des informations.',
     projectLive: 'Démo en ligne',
     projectProgress: 'En cours',
@@ -100,7 +102,18 @@ const translations = {
     githubFollowers: 'Abonnés',
     githubTopLangs: 'Langages les plus utilisés',
     githubError: 'Les statistiques sont momentanément indisponibles (limite de requêtes GitHub). Retrouvez mon profil directement :',
-
+    githubLatestActivity: 'Dernière activité',
+    githubContributions: 'Contributions',
+    githubPushed: 'Commit poussé',
+    githubTo: 'sur',
+    githubIn: 'dans',
+    githubCreated: 'A créé',
+    githubStarred: 'A mis une étoile sur',
+    githubForked: 'A forké',
+    githubIssue: 'une issue',
+    githubPr: 'une pull request',
+    githubActivityIn: 'Activité sur',
+    
     whatsappPreviewTitle: 'Aperçu du message',
     whatsappPreviewDesc: 'Voici le message qui sera envoyé sur WhatsApp.',
     whatsappPreviewEdit: 'Modifier',
@@ -153,6 +166,8 @@ const translations = {
   en: {
     // Navbar
     navbarChangeLanguage: 'Change Language',
+    themeSwitchToLight: 'Switch to light mode',
+    themeSwitchToDark: 'Switch to dark mode',
 
     // Hero
     heroDomain: 'Full-Stack Developer',
@@ -217,8 +232,7 @@ const translations = {
     projectsdesc1: 'E-commerce platform developed for a solid back-end experience: product management, customer journey, and integrated features.',
     projectsdesc2: 'E-learning application with a modern stack: dynamic pages, content management, and tracking designed for a smooth user experience.',
     projectsdesc3: 'Full-stack e-commerce project: reactive front interfaces, clear back-end logic, and persistent data for reliable navigation and cart.',
-    projectsdesc4: 'Belleza website designed for a reactive front-end experience: clear interfaces, structured back-end logic, and persistent data for a reliable user journey.',
-    projectsdesc6: 'Valentine website designed for a fast and sleek experience: polished layout, light interactions, and mobile-friendly rendering.',
+    projectsdesc4: 'Valentine website designed for a fast and sleek experience: polished layout, light interactions, and mobile-friendly rendering.',
     projectsdesc5: 'Dashboard in finalization: data display, back-end logic, and responsive interface for clear control of information.',
     projectLive: 'Live Demo',
     projectProgress: 'In Progress',
@@ -239,6 +253,17 @@ const translations = {
     githubFollowers: 'Followers',
     githubTopLangs: 'Most used languages',
     githubError: 'Stats are temporarily unavailable (GitHub rate limit). Check out my profile directly:',
+    githubLatestActivity: 'Latest activity',
+    githubContributions: 'Contributions',
+    githubPushed: 'Pushed commit',
+    githubTo: 'to',
+    githubIn: 'in',
+    githubCreated: 'Created',
+    githubStarred: 'Starred',
+    githubForked: 'Forked',
+    githubIssue: 'an issue',
+    githubPr: 'a pull request',
+    githubActivityIn: 'Activity in',
 
     whatsappPreviewTitle: 'Message preview',
     whatsappPreviewDesc: 'Here is the message that will be sent on WhatsApp.',
@@ -284,6 +309,8 @@ const translations = {
   de: {
     // Navbar
     navbarChangeLanguage: 'Sprache ändern',
+    themeSwitchToLight: 'Zum hellen Modus wechseln',
+    themeSwitchToDark: 'Zum dunklen Modus wechseln',
 
     // Hero
     heroDomain: 'Full-Stack Entwickler',
@@ -350,8 +377,7 @@ const translations = {
     projectsdesc1: 'E-Commerce-Plattform entwickelt für eine solide Back-End-Erfahrung: Produktmanagement, Kundenreise und integrierte Funktionen.',
     projectsdesc2: 'E-Learning-Anwendung mit einem modernen Stack: dynamische Seiten, Inhaltsverwaltung und Tracking für eine reibungslose Benutzererfahrung.',
     projectsdesc3: 'Full-Stack-E-Commerce-Projekt: reaktive Front-Interfaces, klare Back-End-Logik und persistente Daten für zuverlässige Navigation und Warenkorb.',
-    projectsdesc4: 'Belleza-Website für eine reaktive Front-End-Erfahrung: klare Schnittstellen, strukturierte Back-End-Logik und persistente Daten für eine zuverlässige Benutzerreise.',
-    projectsdesc6: 'Valentine-Website für eine schnelle und elegante Erfahrung: poliertes Layout, leichte Interaktionen und mobilefreundliches Rendering.',
+    projectsdesc4: 'Valentine-Website für eine schnelle und elegante Erfahrung: poliertes Layout, leichte Interaktionen und mobilefreundliches Rendering.',
     projectsdesc5: 'Dashboard in der Finalisierung: Datenanzeige, Back-End-Logik und responsive Oberfläche für klare Kontrolle über Informationen.',
     projectLive: 'Live-Demo',
     projectProgress: 'In Bearbeitung',
@@ -372,6 +398,17 @@ const translations = {
     githubFollowers: 'Follower',
     githubTopLangs: 'Meistgenutzte Sprachen',
     githubError: 'Statistiken sind vorübergehend nicht verfügbar (GitHub-Ratenlimit). Mein Profil direkt ansehen:',
+    githubLatestActivity: 'Letzte Aktivität',
+    githubContributions: 'Beiträge',
+    githubPushed: 'Commit gepusht',
+    githubTo: 'zu',
+    githubIn: 'in',
+    githubCreated: 'Erstellt',
+    githubStarred: 'Hat markiert mit Stern',
+    githubForked: 'Hat geforkt',
+    githubIssue: 'ein Issue',
+    githubPr: 'einen Pull Request',
+    githubActivityIn: 'Aktivität in',
 
     whatsappPreviewTitle: 'Nachrichtenvorschau',
     whatsappPreviewDesc: 'Dies ist die Nachricht, die per WhatsApp gesendet wird.',
@@ -430,4 +467,3 @@ export function setLang(lang) {
   i18nState.lang = lang;
   document.documentElement.lang = lang;
 }
-

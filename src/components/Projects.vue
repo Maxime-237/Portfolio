@@ -59,16 +59,16 @@
                             {{ projet.title }}
                         </h3>
 
-                        <p class="text-amber-100 text-sm leading-relaxed mb-4">{{ projet.desc }}</p>
+                        <p class="text-amber-100 text-sm leading-relaxed mb-4">{{ truncate(projet.desc) }}</p>
 
                         <!-- Technologies -->
                          <div class="flex flex-wrap gap-2 mb-4">
                             <span v-for="tech in projet.technolg"
-                                :key="tech.name"
-                                class="px-2 py-1 border rounded text-xs font-mono"
-                                :class="tech.class">
+                                :key="tech"
+                                class="flex items-center gap-1.5 px-2.5 py-1 border border-amber-400/20 bg-amber-400/5 rounded text-xs font-mono text-amber-100">
 
-                                {{ tech.name }}
+                                <TechIcon :name="tech" />
+                                {{ tech }}
                             </span>
                          </div>
 
@@ -115,7 +115,7 @@
 
             <div class="inline-flex flex-col sm:flex-row gap-4 items-center">
 
-                <a
+               <a 
                     href="https://github.com/Maxime-237"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -149,12 +149,13 @@ import { computed, ref } from 'vue';
 import { setLang, t, i18nState } from '../i18n.js';
 import { openWhatsAppPreview } from '../composables/useWhatsApp.js';
 import ProjectModal from './ProjectModal.vue';
+import TechIcon from './TechIcon.vue';
 import image1 from '../../public/artshoptof.PNG'
 import image2 from '../../public/Patlearn_img.PNG'
 import image3 from '../../public/gamestore.PNG'
-import image4 from '../../public/belleza.PNG'
-import image5 from '../../public/valentine-project.png'
-import image6 from '../../public/presenceToggle.PNG'
+import image4 from '../../public/valentine-project.png'
+import image5 from '../../public/presenceToggle.PNG'
+import belleza from '../../public/belleza.PNG'
 
 const selectedProject = ref(null);
 
@@ -170,16 +171,23 @@ const projets = ref(computed(() => [
         category: 'Back-end',
         bordColor: 'border-amber-500/20',
         badgColor: "bg-amber-500",
-        technolg: [
-            { name: "Html - Css - js, Blade", class: 'bg-amber-500/20 border-amber-400/30 text-amber-200' },
-            { name: "Laravel-PHP", class: 'bg-teal-500/20 border-teal-400/30 text-teal-200' },
-            { name: "PostgreSQL", class: 'bg-amber-500/20 border-amber-400/30 text-amber-200' }
-        ],
+        technolg: ['HTML', 'CSS', 'JavaScript', 'Blade', 'Laravel', 'PHP', 'PostgreSQL'],
         links: [
-            { name: t('projectLive'), url: "https://art-shop-rag8.onrender.com/", icon: EyeIcon, class: "text-amber-400 hover:text-amber-300" },
-            { name: "Code", url: "https://github.com/Maxime-237/art-shop", icon: CodeBracketIcon, class: "text-teal-400 hover:text-teal-300" }
+            {
+                name: t('projectLive'),
+                url: "https://art-shop-rag8.onrender.com/",
+                icon: EyeIcon,
+                class: "text-amber-400 hover:text-amber-300"
+            },
+             {
+                name: "Code",
+                url: "https://github.com/Maxime-237/art-shop",
+                icon: CodeBracketIcon,
+                class: "text-teal-400 hover:text-teal-300"
+            }
         ]
     },
+
     {
         id: 2,
         title: "E-Learning Platform  - PatLearn",
@@ -188,16 +196,23 @@ const projets = ref(computed(() => [
         category: 'Back-end',
         bordColor: 'border-teal-500/20',
         badgColor: "bg-teal-500",
-        technolg: [
-            { name: "Next js", class: 'bg-amber-500/20 border-amber-400/30 text-amber-200' },
-            { name: "Laravel-PHP", class: 'bg-teal-500/20 border-teal-400/30 text-teal-200' },
-            { name: "Supabase", class: 'bg-amber-500/20 border-amber-400/30 text-amber-200' }
-        ],
+        technolg: ['Next.js', 'Laravel', 'PHP', 'Supabase'],
         links: [
-            { name: t('projectLive'), url: "https://patlearn.vercel.app/", icon: EyeIcon, class: "text-amber-400 hover:text-amber-300" },
-            { name: "Code", url: "https://github.com/fidelisdaleck/PATLEARN", icon: CodeBracketIcon, class: "text-teal-400 hover:text-teal-300" }
+            {
+                name: t('projectLive'),
+                url: "https://patlearn.vercel.app/",
+                icon: EyeIcon,
+                class: "text-amber-400 hover:text-amber-300"
+            },
+             {
+                name: "Code",
+                url: "https://github.com/fidelisdaleck/PATLEARN",
+                icon: CodeBracketIcon,
+                class: "text-teal-400 hover:text-teal-300"
+            }
         ]
     },
+    
     {
         id: 3,
         title: "E-Commerce Platform - GameStore",
@@ -206,66 +221,106 @@ const projets = ref(computed(() => [
         category: 'Full-Stack',
         bordColor: 'border-amber-500/20',
         badgColor: "bg-amber-500",
-        technolg: [
-            { name: "Html - Css - js", class: 'bg-amber-500/20 border-amber-400/30 text-amber-200' },
-            { name: "PHP", class: 'bg-teal-500/20 border-teal-400/30 text-teal-200' },
-            { name: "Mysql", class: 'bg-amber-500/20 border-amber-400/30 text-amber-200' }
-        ],
+        technolg: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
         links: [
-            { name: t('projectLive'), url: "https://gamestore-shop.byethost14.com/", icon: EyeIcon, class: "text-amber-400 hover:text-amber-300" },
-            { name: "Code", url: "https://github.com/Maxime-237", icon: CodeBracketIcon, class: "text-teal-400 hover:text-teal-300" }
+            {
+                name: t('projectLive'),
+                url: "https://gamestore-shop.byethost14.com/",
+                icon: EyeIcon,
+                class: "text-amber-400 hover:text-amber-300"
+            },
+             {
+                name: "Code",
+                url: "https://github.com/Maxime-237",
+                icon: CodeBracketIcon,
+                class: "text-teal-400 hover:text-teal-300"
+            }
         ]
     },
     {
         id: 4,
         title: "Belleza Catalog",
-        desc: t('projectsdesc4'),
-        image: image4,
-        category: 'Front-end',
+        desc: t('projectsdescBel'),
+        image: belleza,
+        category: 'Frontend',
         bordColor: 'border-teal-500/20',
         badgColor: "bg-teal-500",
-        technolg: [
-            { name: "Html - Css - js", class: 'bg-amber-500/20 border-amber-400/30 text-amber-200' }
-        ],
+        technolg: ['Vue js', 'tailwindcss'],
         links: [
-            { name: t('projectLive'), url: "https://belleza-catalog.netlify.app/", icon: EyeIcon, class: "text-amber-400 hover:text-amber-300" },
-            { name: "Code", url: "https://github.com/Maxime-237/Belleza-Catalog", icon: CodeBracketIcon, class: "text-teal-400 hover:text-teal-300" }
+            {
+                name: t('projectLive'),
+                url: "https://belleza-catalog.netlify.app/",
+                icon: EyeIcon,
+                class: "text-amber-400 hover:text-amber-300"
+            },
+             {
+                name: "Code",
+                url: "https://github.com/Maxime-237/Belleza-Catalog",
+                icon: CodeBracketIcon,
+                class: "text-teal-400 hover:text-teal-300"
+            }
         ]
     },
     {
         id: 5,
-        title: "Presence - Toggle",
-        desc: t('projectsdesc5'),
-        image: image6,
-        category: 'Dashboard',
+        title: "Valentine website",
+        desc: t('projectsdesc4'),
+        image: image4,
+        category: 'Valentine',
         bordColor: 'border-amber-500/20',
         badgColor: "bg-amber-500",
-        technolg: [
-            { name: "Html - Css - js", class: 'bg-gray-500/20 border-gray-400/30 text-gray-200' },
-            { name: "PHP", class: 'bg-slate-500/20 border-slate-400/30 text-slate-200' },
-            { name: "Mysql", class: 'bg-gray-500/20 border-gray-400/30 text-gray-200' }
-        ],
+        technolg: ['HTML', 'CSS', 'JavaScript'],
         links: [
-            { name: t('projectProgress'), url: "https://github.com/Maxime-237/Presence-Toggle", icon: ClockIcon, class: "text-gray-400 hover:text-teal-300" }
+            {
+                name: t('projectLive'),
+                url: "https://legendary-gumption-0e710b.netlify.app",
+                icon: EyeIcon,
+                class: "text-amber-400 hover:text-amber-300"
+            },
+             {
+                name: "Code",
+                url: "https://github.com/Maxime-237/Valentine-test-website-",
+                icon: CodeBracketIcon,
+                class: "text-teal-400 hover:text-teal-300"
+            }
         ]
     },
     {
         id: 6,
-        title: "Valentine website",
-        desc: t('projectsdesc6'),
+        title: "Presence - Toggle",
+        desc: t('projectsdesc5'),
         image: image5,
-        category: 'Valentine',
+        category: 'Dashboard',
         bordColor: 'border-teal-500/20',
         badgColor: "bg-teal-500",
-        technolg: [
-            { name: "Html - Css - js", class: 'bg-amber-500/20 border-amber-400/30 text-amber-200' }
-        ],
+        technolg: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
         links: [
-            { name: t('projectLive'), url: "https://legendary-gumption-0e710b.netlify.app", icon: EyeIcon, class: "text-amber-400 hover:text-amber-300" },
-            { name: "Code", url: "https://github.com/Maxime-237/Valentine-test-website-", icon: CodeBracketIcon, class: "text-teal-400 hover:text-teal-300" }
+            {
+                name: t('projectProgress'),
+                url: "https://github.com/Maxime-237/Presence-Toggle",
+                icon: ClockIcon,
+                class: "text-gray-400 hover:text-teal-300"
+            }
         ]
     },
-    
+    {
+        id: 6,
+        title: "Presence - Toggle",
+        desc: t('projectsdesc5'),
+        image: image5,
+        category: 'Dashboard',
+        bordColor: 'border-teal-500/20',
+        badgColor: "bg-teal-500",
+        technolg: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+        links: [
+            {
+                name: t('projectProgress'),
+                url: "https://github.com/Maxime-237/Presence-Toggle",
+                icon: ClockIcon,
+                class: "text-gray-400 hover:text-teal-300"
+            }
+        ]
+    }
 ]))
 
 const visibleProjects = computed(() =>
@@ -273,6 +328,11 @@ const visibleProjects = computed(() =>
 );
 
 const hasMore = computed(() => projets.value.length > VISIBLE_COUNT);
+
+function truncate(text, maxLength = 90) {
+  if (!text || text.length <= maxLength) return text;
+  return text.slice(0, maxLength).trimEnd() + '…';
+}
 
 function collapseProjects() {
   showAll.value = false;

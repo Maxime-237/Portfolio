@@ -13,6 +13,7 @@ html {
 body {
     font-family: var(--font-sans);
     background-color: #0b0e14;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,
@@ -43,6 +44,144 @@ h4 {
     border-radius: 9999px;
 }
 
+/* ─────────────────────────────────────────────────────────────
+   MODE CLAIR
+   Le site est conçu "dark" par défaut : toutes les classes Tailwind
+   ci-dessous encodent déjà le thème sombre. Quand la classe .dark
+   est ABSENTE de <html> (mode clair choisi via le bouton), on
+   réécrit précisément les mêmes classes utilitaires pour basculer
+   les fonds et textes neutres vers une palette claire, tout en
+   gardant les couleurs de marque (ambre/teal) identiques dans les
+   deux thèmes.
+   ───────────────────────────────────────────────────────────── */
+
+html:not(.dark) body {
+    background-color: #f8fafc;
+}
+
+/* Fonds de page (gradient principal + loader) */
+html:not(.dark) .from-gray-900 {
+    --tw-gradient-from: #f8fafc;
+}
+
+html:not(.dark) .via-slate-900 {
+    --tw-gradient-via: #ffffff;
+}
+
+html:not(.dark) .to-gray-900 {
+    --tw-gradient-to: #f8fafc;
+}
+
+/* Menu mobile plein écran */
+html:not(.dark) .bg-gray-900 {
+    background-color: #ffffff;
+}
+
+/* Cartes "glass" (projets, services, compétences, témoignages) */
+html:not(.dark) .from-gray-800\/50 {
+    --tw-gradient-from: rgb(255 255 255 / 0.75);
+}
+
+html:not(.dark) .to-slate-900\/30 {
+    --tw-gradient-to: rgb(241 245 249 / 0.5);
+}
+
+html:not(.dark) .from-gray-800\/60 {
+    --tw-gradient-from: rgb(255 255 255 / 0.85);
+}
+
+html:not(.dark) .to-slate-900\/40 {
+    --tw-gradient-to: rgb(241 245 249 / 0.6);
+}
+
+/* Surfaces : footer, widgets, menus déroulants, en-têtes de modal */
+html:not(.dark) .bg-gray-900\/80 {
+    background-color: rgb(255 255 255 / 0.85);
+}
+
+html:not(.dark) .bg-gray-900\/90 {
+    background-color: rgb(255 255 255 / 0.97);
+}
+
+html:not(.dark) .bg-gray-900\/95 {
+    background-color: rgb(255 255 255 / 0.97);
+}
+
+html:not(.dark) .bg-gray-900\/40 {
+    background-color: rgb(255 255 255 / 0.7);
+}
+
+/* Champs de formulaire */
+html:not(.dark) .bg-gray-800\/50 {
+    background-color: rgb(241 245 249 / 0.8);
+}
+
+html:not(.dark) .bg-gray-800\/60 {
+    background-color: rgb(241 245 249 / 0.85);
+}
+
+/* Boutons/menu burger */
+html:not(.dark) .bg-slate-800\/50 {
+    background-color: rgb(226 232 240 / 0.7);
+}
+
+html:not(.dark) .bg-slate-700\/50 {
+    background-color: rgb(203 213 225 / 0.7);
+}
+
+/* Barres de progression (fond de piste) */
+html:not(.dark) .bg-gray-700 {
+    background-color: #e2e8f0;
+}
+
+html:not(.dark) .bg-gray-800 {
+    background-color: #e2e8f0;
+}
+
+/* Séparateurs très subtils dans les en-têtes de fenêtre "terminal" */
+html:not(.dark) .border-white\/5 {
+    border-color: rgb(15 23 42 / 0.08);
+}
+
+html:not(.dark) .bg-white\/\[0\.02\] {
+    background-color: rgb(15 23 42 / 0.02);
+}
+
+/* Textes */
+html:not(.dark) .text-white {
+    color: #0f172a;
+}
+
+html:not(.dark) .text-amber-100 {
+    color: #334155;
+}
+
+html:not(.dark) .text-amber-200 {
+    color: #64748b;
+}
+
+html:not(.dark) .text-gray-300 {
+    color: #475569;
+}
+
+html:not(.dark) .text-gray-400 {
+    color: #64748b;
+}
+
+html:not(.dark) .text-gray-200,
+html:not(.dark) .text-slate-200 {
+    color: #475569;
+}
+
+/* Pastilles de techno "neutres" (projet Presence-Toggle) restent lisibles */
+html:not(.dark) .bg-gray-500\/20 {
+    background-color: rgb(100 116 139 / 0.12);
+}
+
+html:not(.dark) .bg-slate-500\/20 {
+    background-color: rgb(100 116 139 / 0.12);
+}
+
 /* Custom scrollbar, quieter than the browser default */
 ::-webkit-scrollbar {
     width: 10px;
@@ -59,6 +198,18 @@ h4 {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #ca8a04;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+    background: #fcd9a3;
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b;
 }
 
 ::selection {

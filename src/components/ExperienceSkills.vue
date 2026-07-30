@@ -62,7 +62,8 @@
                     <div class="flex flex-wrap gap-3">
                         <span v-for="tech in techStack"
                             :key="tech"
-                            class="px-4 py-2 bg-linear-to-r from-amber-500/20 border border-amber-400/30 rounded-full text-amber-200 text-sm font-mono font-medium hover:scale-105 transition-transform duration-300">
+                            class="flex items-center gap-2 px-4 py-2 bg-linear-to-r from-amber-500/20 border border-amber-400/30 rounded-full text-amber-200 text-sm font-mono font-medium hover:scale-105 transition-transform duration-300">
+                            <TechIcon :name="tech" />
                             {{ tech }}
 
                         </span>
@@ -115,6 +116,7 @@
 import { BriefcaseIcon, CloudIcon, CodeBracketIcon, DevicePhoneMobileIcon, PaintBrushIcon, ServerIcon, Squares2X2Icon } from '@heroicons/vue/16/solid';
 import { setLang, t, i18nState } from '../i18n.js';
 import { computed } from 'vue';
+import TechIcon from './TechIcon.vue';
 
 const skills = [
     {
@@ -207,4 +209,3 @@ const techStack = [
     'Vue js', 'Laravel', 'Mysql', 'PostgreSQL', 'Tailwind Css','python', 'Figma', 'Git', 'Docker', 'REST APIs'
 ]
 </script>
-
