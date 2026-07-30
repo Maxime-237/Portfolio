@@ -31,10 +31,10 @@
             <div class="mb-6">
               <h4 class="font-mono text-xs uppercase tracking-wider text-teal-400 mb-3">{{ t('modalStack') }}</h4>
               <div class="flex flex-wrap gap-2">
-                <span v-for="tech in project.technolg" :key="tech.name"
-                  class="px-3 py-1.5 border rounded-lg text-sm font-mono"
-                  :class="tech.class">
-                  {{ tech.name }}
+                <span v-for="tech in project.technolg" :key="tech"
+                  class="flex items-center gap-2 px-3 py-1.5 border border-amber-400/20 bg-amber-400/5 rounded-lg text-sm font-mono text-amber-100">
+                  <TechIcon :name="tech" />
+                  {{ tech }}
                 </span>
               </div>
             </div>
@@ -57,6 +57,7 @@
 <script setup>
 import { computed } from 'vue';
 import { t } from '../i18n.js';
+import TechIcon from './TechIcon.vue';
 
 const props = defineProps({
   project: { type: Object, default: null },

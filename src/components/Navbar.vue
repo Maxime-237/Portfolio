@@ -30,7 +30,7 @@
     </div>
 
     <nav :class="[
-    `fixed inset-0 z-0 flex flex-col items-center justify-center bg-[#111827] md:relative md:bg-transparent md:flex md:justify-between md:flex-row`,
+    `fixed inset-0 z-0 flex flex-col items-center justify-center bg-gray-900 md:relative md:bg-transparent md:flex md:justify-between md:flex-row`,
     isMenuOpen ? 'block' : 'hidden'
   ]">
 
@@ -45,22 +45,25 @@
         </li>
     </ul>
 
-    <div class="mt-8 md:mt-0 md:ml-8">
+    <div class="mt-8 md:mt-0 md:ml-8 flex items-center gap-3">
+        <ThemeToggle />
+
         <div class="relative">
           <button
             type="button"
-            class="px-6 py-2.5 bg-linear-to-r from-amber-500 to-teal-500 text-white rounded-full hover:shadow-lg hover:shadow-amber-500/25 transition-all duration-300 hover:scale-105 flex items-center gap-2"
+            class="w-11 h-11 flex items-center justify-center rounded-full border border-amber-400/30 bg-amber-400/5 hover:bg-amber-400/10 transition-all duration-300 text-lg"
             @click="isLangOpen = !isLangOpen"
             aria-haspopup="listbox"
             :aria-expanded="isLangOpen"
+            :aria-label="t('navbarChangeLanguage')"
+            :title="t('navbarChangeLanguage')"
           >
-<span class="font-mono text-sm">{{ t('navbarChangeLanguage') }}</span>
-            <span class="text-base">{{ currentLangLabel }}</span>
+            {{ currentLangFlag }}
           </button>
 
           <div
             v-if="isLangOpen"
-            class="absolute right-0 mt-3 w-56 bg-gray-900/90 border border-amber-400/30 rounded-xl shadow-2xl backdrop-blur p-2 z-50"
+            class="absolute right-0 mt-3 w-48 bg-gray-900/90 border border-amber-400/30 rounded-xl shadow-2xl backdrop-blur p-2 z-50"
             role="listbox"
           >
             <button
@@ -86,6 +89,7 @@
 <script setup>
 import { computed, ref, watch } from 'vue';
 import { setLang, t, i18nState } from '../i18n.js';
+import ThemeToggle from './ThemeToggle.vue';
 
 
 
@@ -109,6 +113,7 @@ const languages = [
 
 const currentLang = ref(i18nState.lang);
 const currentLangLabel = computed(() => languages.find((l) => l.code === i18nState.lang)?.label ?? '');
+const currentLangFlag = computed(() => languages.find((l) => l.code === i18nState.lang)?.flag ?? '🌐');
 
 // keep local selection in sync with global state
 watch(
@@ -133,4 +138,3 @@ const scrollTosection = (href) => {
     }
 }
 </script>
-
