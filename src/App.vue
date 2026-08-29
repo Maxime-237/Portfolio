@@ -5,7 +5,7 @@
     <LoadingSpinner />
   </div>
 
-  <div v-else class="min-h-screen bg-linear-to-br from-gray-900 via-slate-900 to-gray-900">
+  <div v-else class="min-h-screen bg-linear-to-br from-gray-900 via-slate-900 to-gray-900 pb-24 md:pb-0">
     <Navbar />
     <Hero />
     <About />
@@ -18,6 +18,7 @@
     <Footer />
     <BackToTop />
     <WhatsAppPreviewModal />
+    <MobileTabBar />
   </div>
 </template>
 
@@ -39,6 +40,7 @@ import Footer from './components/Footer.vue';
 import BackToTop from './components/BackToTop.vue';
 import LoadingSpinner from './components/LoadingSpinner.vue';
 import WhatsAppPreviewModal from './components/WhatsAppPreviewModal.vue';
+import MobileTabBar from './components/MobileTabBar.vue';
 
         
 const loading = ref(true);

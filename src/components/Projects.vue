@@ -303,24 +303,6 @@ const projets = ref(computed(() => [
             }
         ]
     },
-    {
-        id: 6,
-        title: "Presence - Toggle",
-        desc: t('projectsdesc5'),
-        image: image5,
-        category: 'Dashboard',
-        bordColor: 'border-teal-500/20',
-        badgColor: "bg-teal-500",
-        technolg: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-        links: [
-            {
-                name: t('projectProgress'),
-                url: "https://github.com/Maxime-237/Presence-Toggle",
-                icon: ClockIcon,
-                class: "text-gray-400 hover:text-teal-300"
-            }
-        ]
-    }
 ]))
 
 const visibleProjects = computed(() =>

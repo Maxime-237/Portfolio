@@ -1,9 +1,11 @@
 <template>
-  <button v-if="isVisible" @click="scrollToTop"
-    class="fixed bottom-4 right-4 bg-linear-to-r from-amber-600 to-teal-600 text-white rounded-full w-12 h-12 items-center justify-center text-xl cursor-pointer transition-opacity duration-opacity duration-300 hover:bg-amber-600"
-    >
-    ⇪
-    </button>
+  <Transition name="fade">
+    <button v-if="isVisible" @click="scrollToTop"
+      class="fixed bottom-24 right-4 md:bottom-4 z-30 bg-linear-to-r from-amber-600 to-teal-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl cursor-pointer transition-opacity duration-300 hover:bg-amber-600"
+      >
+      ⇪
+      </button>
+  </Transition>
 </template>
 
 <script setup>
@@ -29,3 +31,14 @@ onUnmounted(() => {
 });
 
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
