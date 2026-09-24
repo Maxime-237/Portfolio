@@ -156,6 +156,7 @@ import image3 from '../../public/gamestore.PNG'
 import image4 from '../../public/valentine-project.png'
 import image5 from '../../public/presenceToggle.PNG'
 import belleza from '../../public/belleza.PNG'
+import dao from '../../public/daouzyj.PNG'
 
 const selectedProject = ref(null);
 
@@ -308,7 +309,7 @@ const projets = ref(computed(() => [
         id: 7,
         title: "Daouzy J",
         desc: t('projectsdesc6'),
-        image: image4,
+        image: dao,
         category: 'Frontend',
         bordColor: 'border-amber-500/20',
         badgColor: "bg-amber-500",
