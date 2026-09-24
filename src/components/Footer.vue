@@ -87,7 +87,7 @@ const WHATSAPP_NUMBER = '237674330299';
 const socialLinks = [
   {
     name: 'Email',
-    href: 'mailto:enfanposemaxime@gmail.com',
+    href: 'mailto:enfantposemaxime@gmail.com',
     label: 'Email',
     iconClass: 'fa-solid fa-envelope',
   },
