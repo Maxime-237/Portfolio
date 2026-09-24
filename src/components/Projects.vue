@@ -303,6 +303,31 @@ const projets = ref(computed(() => [
             }
         ]
     },
+
+    {
+        id: 7,
+        title: "Daouzy J",
+        desc: t('projectsdesc6'),
+        image: image4,
+        category: 'Frontend',
+        bordColor: 'border-amber-500/20',
+        badgColor: "bg-amber-500",
+        technolg: ['Vue js', 'tailwindcss'],
+        links: [
+            {
+                name: t('projectLive'),
+                url: "https://daouzy-j.netlify.app/",
+                icon: EyeIcon,
+                class: "text-amber-400 hover:text-amber-300"
+            },
+             {
+                name: "Code",
+                url: "https://github.com/Maxime-237/Daouzy-J-",
+                icon: CodeBracketIcon,
+                class: "text-teal-400 hover:text-teal-300"
+            }
+        ]
+    }
 ]))
 
 const visibleProjects = computed(() =>
