@@ -116,8 +116,8 @@
                 data-aos="zoom-in" data-aos-delay="500"
               >
 
-                <div class="rounded-xl overflow-hidden">
-                  <img src="../../public/prestige.png" 
+                <div class="rounded-xl">
+                  <img src="../../public/Portrait professionnel en costume, fond transparent.png" 
                       alt="Maxime - Full Stack Developer"
                       loading="lazy"
                       class="w-125 h-130 object-contain -translate-y-8">
